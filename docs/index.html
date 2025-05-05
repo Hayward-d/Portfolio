@@ -4,49 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Your Name | Portfolio</title>
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="index.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header class="hero">
     <div class="container">
-      <h1>Your Name</h1>
-      <p>Web Developer | Designer | Creator</p>
+      <h1 class="glow">Donald Hayward</h1>
+      <p class="fade-in">Developer | Game Designer | Entropenm</p>
     </div>
   </header>
 
-  <section class="about">
-    <div class="container">
-      <h2>About Me</h2>
+  <section class="about fade-in">
+    <div class="aboutme">
+        <div class="aboutmeheader">
+          <h2>About Me</h2>
+        </div>
       <p>
-        I'm a passionate web developer with experience in building responsive and dynamic websites using modern technologies. I enjoy creating clean, user-friendly interfaces.
+        Hi, I’m Donald Hayward, a recent Computer Science graduate with a passion for building efficient, creative, and user-focused software solutions. I enjoy solving real-world problems through code and have experience with languages like Python, Java, and C++, as well as web technologies like HTML, CSS, and JavaScript.</p>
+
+        <p>Throughout my academic journey, I’ve worked on a variety of projects—from developing web apps to implementing algorithms and building small games—that have strengthened both my technical skills and my love for learning. I’m currently seeking opportunities where I can grow as a developer, contribute to meaningful projects, and collaborate with innovative teams.</p>
+
+        <p>When I’m not coding, I’m exploring new tech trends, reading up on AI, or tinkering with side projects.</p>
+
+        <p>Let’s build something great together.
       </p>
     </div>
   </section>
 
-  <section class="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-list">
-        <div class="project-card">
-          <h3>Project One</h3>
-          <p>A description of your first project goes here.</p>
-        </div>
-        <div class="project-card">
-          <h3>Project Two</h3>
-          <p>A description of your second project goes here.</p>
-        </div>
-        <!-- Add more projects as needed -->
-      </div>
-    </div>
-  </section>
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="project-list">
 
-  <section class="contact">
+      <a href="https://example.com/project1" target="_blank" class="project-link">
+        <div class="project-card fade-in">
+          <h3>🌐 Portfolio Website</h3>
+          <p>A stylish and animated personal portfolio made with HTML/CSS/JavaScript.</p>
+        </div>
+      </a>
+
+      <a href="https://example.com/project2" target="_blank" class="project-link">
+        <div class="project-card fade-in">
+          <h3>🐦 Bird Identifier Website</h3>
+          <p>Designed a sleek website for users to upload photos to an AI powered bird identifier.</p>
+        </div>
+      </a>
+
+      <a href="https://example.com/project3" target="_blank" class="project-link">
+        <div class="project-card fade-in">
+          <h3>⚠️ Custom Compiler</h3>
+          <p>A custom compiler built to parse and compile a custom language using Antlr4.</p>
+        </div>
+      </a>
+      <!-- Add more cards the same way -->
+
+    </div>
+  </div>
+</section>
+
+
+  <section class="contact fade-in">
     <div class="container">
       <h2>Contact</h2>
-      <p>Email: your.email@example.com</p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
+      <p>Email: <a href="mailto:donald@ducktechtive.com">donald@ducktechtive.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/donald-hayward-b2709b283/" target="_blank">linkedin.com/in/donald-hayward</a></p>
+      <p>GitHub: <a href="https://github.com/Hayward-d" target="_blank">https://github.com/Hayward-d</a></p>
     </div>
   </section>
 
@@ -54,5 +78,18 @@
     <p>&copy; 2025 Your Name. All rights reserved.</p>
   </footer>
 
+  <script>
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
