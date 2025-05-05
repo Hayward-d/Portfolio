@@ -40,10 +40,32 @@ header.hero {
   background: linear-gradient(to right, #8B0000, #B22222); /* Dark reds */
   color: white;
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 1rem 2rem;
   position: relative;
   overflow: hidden;
 }
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+  text-align: left;
+  max-width: 600px;
+}
+
 
 .glow {
   font-size: 3rem;
@@ -141,5 +163,14 @@ footer {
 
   h2 {
     font-size: 2rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
   }
 }
