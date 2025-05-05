@@ -1,56 +1,145 @@
-body {
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #121212; /* Dark background */
+  color: #f0f0f0;       /* Light text */
+  scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
 .container {
   width: 90%;
   max-width: 1000px;
   margin: auto;
-  padding: 2rem 0;
+  padding: 3rem 0;
+}
+
+.aboutme {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 0;
+  text-align: justify;
+}
+
+.aboutmeheader {
+  height: 150px;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 0;
+  text-align: center;
 }
 
 header.hero {
-  background: #4e54c8;
+  background: linear-gradient(to right, #8B0000, #B22222); /* Dark reds */
   color: white;
-  padding: 5rem 0;
   text-align: center;
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
-header.hero h1 {
+.glow {
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px #ff0000, 0 0 30px #ff5555;
+  animation: pulse 2s infinite ease-in-out;
 }
 
-.about, .projects, .contact {
-  padding: 4rem 0;
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 15px #ff0000, 0 0 30px #ff5555;
+  }
+  50% {
+    text-shadow: 0 0 25px #ff3333, 0 0 50px #ff6666;
+  }
+}
+
+section {
+  text-align: center;
+  padding: 2rem 0; /* Reduced spacing between sections */
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
+  font-size: 2.5rem;
+  color: #ff5555;
+  margin-bottom: 1.5rem;
 }
 
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding-top: 1rem;
+  margin-top: 2rem;
 }
 
 .project-card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  background: #1e1e1e;
+  border-radius: 15px;
   padding: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #eaeaea;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(255, 0, 0, 0.2);
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+  transform: scale(1.02);
+}
+
+a {
+  color: #ff4d4d;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #fff;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #eee;
+  padding: 2rem 1rem;
+  background: #1a1a1a;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .glow {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
 }
