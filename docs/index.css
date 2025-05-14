@@ -230,3 +230,22 @@ footer {
     padding: 0.4rem 0.8rem;
   }
 }
+
+/* Title Text */
+#modal h2 {
+  color: #ff4d4d;
+}
+
+/* Body Text */
+#modal p {
+  color: #dddddd;
+}
+
+#modal span {
+  color: #ff4d4d;
+}
+
+#modal span:hover {
+  color: #ff1a1a;
+}
+

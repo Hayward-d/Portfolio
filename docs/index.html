@@ -84,7 +84,8 @@
         </div>
       </a>
 
-      <a href="https://example.com/project3" target="_blank" class="project-link">
+      <!-- Replace this anchor tag -->
+      <a href="#" onclick="showModal()" class="project-link">
         <div class="project-card fade-in">
           <h3>⚠️ Custom Compiler</h3>
           <p>A custom compiler built to parse and compile a custom language using Antlr4.</p>
@@ -110,7 +111,27 @@
     <p>&copy; 2025 Donald Hayward. All rights reserved.</p>
   </footer>
 
+  <!-- Modal HTML -->
+  <div id="modal" style="display:none; position:fixed; top:20%; left:50%; transform:translateX(-50%); width:60%; background:black; border:2px solid #333; padding:20px; z-index:1001; box-shadow:0 5px 15px rgba(255,0,0,0.2); border-radius:10px;">
+    <span onclick="closeModal()" style="float:right; font-size:24px; cursor:pointer;">&times;</span>
+    <h2>⚠️ Custom Compiler</h2>
+    <p>The compiler was built using ANTLR4 to parse and translate a custom language into intermediate and assembly code. Contact me if you'd like to see the full source!</p>
+  </div>
+
+  <!-- Modal backdrop -->
+  <div id="modal-backdrop" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1000;" onclick="closeModal()"></div>
+
   <script>
+    function showModal() {
+      document.getElementById('modal').style.display = 'block';
+      document.getElementById('modal-backdrop').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+      document.getElementById('modal-backdrop').style.display = 'none';
+    }
+
     // Fade-in on scroll
     const faders = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
@@ -123,5 +144,7 @@
 
     faders.forEach(el => observer.observe(el));
   </script>
+
+
 </body>
 </html>
