@@ -222,6 +222,9 @@ footer {
 .skill-tag.tensorflow { background-color: #ff6f00; }
 .skill-tag.flask { background-color: #000000; }
 .skill-tag.gdscript { background-color: #478cbf; }
+.skill-tag.cobol { background-color: #005c5c; }
+.skill-tag.kali { background-color: #353535; }
+.skill-tag.weka { background-color: #4a148c; }
 
 /* Responsive skill grid */
 @media (max-width: 600px) {
