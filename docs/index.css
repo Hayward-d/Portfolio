@@ -253,3 +253,71 @@ footer {
   color: #ff1a1a;
 }
 
+.shimmer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.shimmer {
+		text-align: left;
+		color: rgba(255, 255, 255, 0.1);
+		background: -webkit-gradient(linear, left top, right top, from(#f6cdcd), to(#ff4d4d), color-stop(0.5, #ff1a1a));
+		background: -moz-gradient(linear, left top, right top, from(#f6cdcd), to(#ff4d4d), color-stop(0.5, #ff1a1a));
+		background: gradient(linear, left top, right top, from(#f6cdcd), to(#ff4d4d), color-stop(0.5, #ff1a1a));
+		-webkit-background-size: 125px 100%;
+		-moz-background-size: 125px 100%;
+		background-size: 125px 100%;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+		-webkit-animation-name: shimmer;
+		-moz-animation-name: shimmer;
+		animation-name: shimmer;
+		-webkit-animation-duration: 2s;
+		-moz-animation-duration: 2s;
+		animation-duration: 2s;
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-color: #fff;
+}
+
+@-moz-keyframes shimmer {
+		0% {
+				background-position: top left;
+		}
+		100% {
+				background-position: top right;
+		}
+}
+
+@-webkit-keyframes shimmer {
+		0% {
+				background-position: top left;
+		}
+		100% {
+				background-position: top right;
+		}
+}
+
+@-o-keyframes shimmer {
+		0% {
+				background-position: top left;
+		}
+		100% {
+				background-position: top right;
+		}
+}
+
+@keyframes shimmer {
+		0% {
+				background-position: -100% 0;
+		}
+		100% {
+				background-position: 100% 0;
+		}
+}
